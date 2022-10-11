@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Admin Application Sketch</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/position.js"></script>
+    </head>
+
+    <body>
+        <h1 align="center">Admin Application Sketch</h1>
+
+        <div id align="center">
+            <table align="center">
+                <tr>
+                    <td><b>Device Id</b></td>
+                    <td><input type="text" id="deviceId" size="35" value="123456" class="regular_input"></td>
+                </tr>
+                <tr>
+                    <td><b>Start Date</b></td>
+                    <td><input type="text" id="startDate" size="35" value="2020-01-01 00:00:00"></td>
+                </tr>
+                <tr>
+                    <td><b>End Date</b></td>
+                    <td><input type="text" id="endDate" size="35" value="2022-01-01 00:00:00"
+                               onkeydown="if (event.keyCode == 13) getPositions()"></td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td align="left"><input type="button" id="get_positions_button" size="35" value="Get Positions"
+                                            onclick=getPositions()></td>
+                    <td align="right"><input type="button" name="show_static_position" size="35" value="Show on Map"
+                                             onclick=goToPage('map.html')></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="result" align="center">
+            <h2>Results will be printed here</h2>
+        </div>
+    </body>
+</html>
